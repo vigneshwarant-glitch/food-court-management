@@ -9,38 +9,43 @@
 
 <div class="container">
 
-    <!-- Login Form -->
+    <!-- ================= LOGIN FORM ================= -->
     <div class="form-box" id="loginForm">
         <h2>Food Court Login</h2>
 
-       <form id="loginFormElement">
+        <form id="loginFormElement">
 
-    <input type="email" id="loginEmail" placeholder="Email">
-    <input type="password" id="loginPassword" placeholder="Password">
-    <!-- OTP Box -->
-<div id="otpBox" style="display:none;">
+            <input type="email" id="loginEmail" placeholder="Email">
+            <input type="password" id="loginPassword" placeholder="Password">
 
-    <h3>Enter OTP</h3>
+            <!-- CAPTCHA Section -->
+            <div id="captchaSection">
 
-    <input type="number" id="otpInput" placeholder="Enter OTP">
+                <div class="captcha-box">
+                    <span id="captchaText"></span>
+                    <button type="button" id="refreshCaptcha">↻</button>
+                </div>
 
-    <button id="verifyOtpBtn">Verify OTP</button>
+                <input type="text" id="captchaInput" placeholder="Enter CAPTCHA">
 
-</div>
+            </div>
 
+            <!-- OTP Box -->
+            <div id="otpBox" style="display:none;">
 
-    <!-- CAPTCHA Display -->
-    <div class="captcha-box">
-        <span id="captchaText"></span>
-        <button type="button" id="refreshCaptcha">↻</button>
-    </div>
+                <h3>Enter OTP</h3>
 
-    <!-- CAPTCHA Input -->
-    <input type="text" id="captchaInput" placeholder="Enter CAPTCHA">
+                <input type="number" id="otpInput" placeholder="Enter OTP">
 
-    <button type="submit">Login</button>
-</form>
+                <button type="button" id="verifyOtpBtn">
+                    Verify OTP
+                </button>
 
+            </div>
+
+            <button type="submit">Login</button>
+
+        </form>
 
         <p class="toggle-text">
             Don’t have an account?
@@ -48,8 +53,9 @@
         </p>
     </div>
 
-    <!-- Registration Form -->
-    <div class="form-box" id="registerForm">
+
+    <!-- ================= REGISTER FORM ================= -->
+    <div class="form-box" id="registerForm" style="display:none;">
         <h2>Register</h2>
 
         <form id="registerFormElement">
